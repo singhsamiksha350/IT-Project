@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap" rel="stylesheet" /> -->
+
+    <style>
+        body {
+            background-color: rgb(186, 149, 232);
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            font-size: 28px;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: white;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgb(71, 37, 68);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity: 1;
+        }
+
+        .cancel {
+            padding: 14px 20px;
+            background-color: #ff3d2f;
+        }
+
+        #h1 {
+            font-style: italic;
+        }
+
+        #form {
+            border: 1px solid whitesmoke;
+            box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #p1 {
+            margin: 300px 200px 5px 450px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="RegForm" onsubmit="return validate()" method="post" action="#" id="myForm">>
+        <div id="error">
+            <h1 id="h1">Fill The Folowing Details.</h1>
+            <hr>
+            <hr>
+            <label for="name"><b>Enter Your Name:</b></label>
+            <input type="text" id='name' placeholder="Enter name" name="Name">
+            <label for="email"><b>Enter Your Email ID:</b></label>
+            <input type="text" id='email' placeholder="Enter email" name="EMail">
+            <label for="password"><b>Create password:</b></label>
+            <input type="password" id='password' placeholder="Create password" name="Password">
+            <label>
+                <input type="checkbox" checked="checked" name="remember">Remember
+            </label>
+            <p>
+                I agree with all terms and conditions.
+            </p>
+            <div>
+                <button type="submit" class="signup" value="send" name="submit" id="submit">Sign Up</button>
+                <button type="button" id="cancel" class='cancel'>Cancel</button>
+            </div>
+        </div>
+    </form>
+    <p id="p1">&#127803 The writer is an explorer. Every step is an advance into a new land. &#127803</p>
+
+    <script>
+
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;                  //Javascript reGex for Email Validation.
+        var regPhone = /^\d{10}$/;                                                       // Javascript reGex for Phone Number validation.
+        var regName = /\d+$/g;
+
+        function validate() {
+            var name =
+                document.forms.RegForm.Name.value;
+            var email =
+                document.forms.RegForm.EMail.value;
+            var password =
+                document.forms.RegForm.Password.value;
+
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+            var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+
+            if (name == "" || regName.test(name)) {
+                window.alert("Please enter your name properly.");
+                name.focus();
+                return false;
+            }
+
+            if (email == "" || !regEmail.test(email)) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (password == "") {
+                alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password should be atleast 6 character long");
+                password.focus();
+                return false;
+
+            }
+
+        }
+
+        
+        let datas = [];
+        const addData = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            }
+            datas.push(data);
+            document.forms[0].reset(); 
+            console.warn('added' , {datas} );
+
+            //saving to localStorage
+            localStorage.setItem('MyInfo', JSON.stringify(datas) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('submit').addEventListener('click', addData);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

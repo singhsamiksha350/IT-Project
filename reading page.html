@@ -1,0 +1,359 @@
+<!-- <!DOCTYPE html>
+
+<head>
+
+</head>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+    }
+
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+<script type="text/javascript" src="articles.json"></script>
+<script type="text/javascript" src="rp.js"></script>
+
+
+
+<div class="navbar">
+    <a href="./index.htm">Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./writing_page.html">Writing Page</a>
+            <a href="./login.html">Login/Signup</a>
+            <a href="./test.html">Search</a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <div id="Title" style="text-align: center;">
+        <H1> Read All you Can!!</H1>
+    </div>
+    <div id="Content" style="background-color: lightgray;
+    border: 300px black;
+    padding: 50px;
+    margin: 20px;">
+        Fetch article from database
+    </div>
+
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+
+<head>
+
+
+</head>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+    }
+
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+
+
+
+
+<div class="navbar">
+    <a href="./index.htm">Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./writing_page.html">Writing Page</a>
+            <a href="./login.html">Login/Signup</a>
+            <a href="./test.html">Search</a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <div id="Title" style="text-align: center;">
+        <H1> Read All you Can!!</H1>
+    </div>
+
+
+
+
+    <p id="1" style="background-color: rgb(238, 237, 156);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Adventure
+    </p>
+
+    <script>
+        document.getElementById("1").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("1").innerHTML = "I’ve never lived in a haunted house, but my mother did as a teen,” writes Reddit.com user PatentedSpaceHook, recounting a true event. “Other houses on her street had strange things going on too. A few homes away from her lived a family. One night, the daughter went to bed with a bad headache. The next day, she was dead—she’d passed away from an aneurysm.“After her funeral, the family went away to get their minds off the tragedy, and the father asked my uncle—my mom’s brother—to check on their pets. My mom and dad (who were dating at the time) went with him; my mother had heard there was a grand piano, and she wanted to play it. My dad was studying to be a veterinarian.";
+        }
+    </script>
+
+    <p id="2" style="background-color: rgb(236, 134, 116);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Horror
+    </p>
+
+    <script>
+        document.getElementById("2").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("2").innerHTML = "“My neighbor Diane and I had a playful poltergeist for years, and we called it Billy.” So begins Reddit.com user abbys_alibi in their real-life ghost story. “I’d come home and find something put in a weird place: milk in a cupboard, toilet paper in the fridge, laundry detergent in the bathtub. Diane once called to ask if Billy had been around, because she couldn’t find a gallon of milk. We finally found it outside on her back steps. And sugar … darn sugar! Every morning, my sugar bowl was empty.";
+        }
+    </script>
+
+    <p id="3" style="background-color: rgb(121, 195, 245);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Fantasy
+    </p>
+
+    <script>
+        document.getElementById("3").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("3").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+
+    <p id="4" style="background-color: rgb(166, 174, 248);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Teen Lit
+    </p>
+
+    <script>
+        document.getElementById("4").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("4").innerHTML = "Before Reddit.com user Digsdaws got down to recounting their scariest of ghost stories—about living in a place that was obviously teaming with honest-to-goodness members of the spiritual world—they pointed out the irony of ghost stories that begin with the phrase, “I don’t believe in ghosts, but …” After all, no matter how a ghost story begins, it always hinges on the notion that, come on, of course we believe in ghosts!";
+
+        }
+    </script>
+
+    <p id="5" style="background-color: rgb(186, 245, 151);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Short story
+    </p>
+
+    <script>
+        document.getElementById("5").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("5").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+
+    <p id="6" style="background-color: rgb(149, 227, 247);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Mystery
+    </p>
+
+    <script>
+        document.getElementById("6").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("6").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+    <p id="7" style="background-color: rgb(171, 235, 146);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read New Adult
+    </p>
+
+    <script>
+        document.getElementById("7").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("7").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+    <p id="8" style="background-color: rgb(199, 178, 236);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Thrill
+    </p>
+
+    <script>
+        document.getElementById("8").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("8").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+    <p id="9" style="background-color: rgb(233, 201, 201);
+border: 300px black;
+padding: 50px;
+margin: 20px;">
+        Click to read Romance
+    </p>
+
+    <script>
+        document.getElementById("9").addEventListener("click", myFunction);
+
+        function myFunction() {
+            document.getElementById("9").innerHTML = "Night OutThis nearly wordless book opens with a young boy in a boarding school who eats separately at dinner and lies awake while his peers sleep. After receiving an invitation with the words “the honor of your presence is requested,” the boy looks out the window at a full moon, trying to decide if he will accept the invitation or not. Who could the invitation be from? What kind of adventure awaits? Should he follow the enclosed map? The boy exits the window and takes off on his bike under the moonlight. The gouache and colored pencil illustrations capture the mystery of nighttime as the boy travels across the countryside. The color palette changes as he meets new friends and enjoys a party at his destination. The story unfolds much like a dream, allowing children to bring their imaginations to the narrative as they wonder what adventures they might have on a night out.";
+        }
+    </script>
+
+
+</body>
+
+</html>

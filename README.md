@@ -1,1 +1,2 @@
-# IT-Project
+# IT-PROJECT
+This repository is for IT project. 

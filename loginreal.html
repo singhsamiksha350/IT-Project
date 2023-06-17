@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LOG IN</title>
+   <style>
+      body {
+         background-color: rgb(186, 149, 232);
+      }
+
+      #h1 {
+         font-style: italic;
+      }
+
+      input[type=text],
+      input[type=password] {
+         width: 100%;
+         font-size: 28px;
+         padding: 15px;
+         margin: 5px 0 22px 0;
+         display: inline-block;
+         border: none;
+         background: white;
+         box-sizing: border-box;
+      }
+
+      label {
+         font-size: 15px;
+         font-style: italic;
+      }
+
+      input[type=text]:focus,
+      input[type=password]:focus {
+         background-color: white;
+         outline: none;
+      }
+
+      hr {
+         border: 1px solid #f1f1f1;
+         margin-bottom: 25px;
+      }
+
+      button {
+         font-size: 18px;
+         font-weight: bold;
+         background-color: rgb(71, 37, 68);
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         cursor: pointer;
+         width: 100%;
+         opacity: 0.9;
+      }
+
+      button:hover {
+         opacity: 1;
+      }
+
+      .cancel {
+         padding: 14px 20px;
+         background-color: #ff3d2f;
+      }
+
+      #form {
+         border: 1px solid whitesmoke;
+         box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      #p1 {
+         margin: 300px 200px 5px 450px;
+         font-style: italic;
+      }
+   </style>
+</head>
+
+<body>
+   <form name="RegForm" onsubmit="return validate()">
+      <div id="login">
+         <h1 id="h1">Log into your account.</h1>
+         <label for="email"><b>Enter your email</b></label>
+         <input type="text" name="email">
+         <label for="password"><b>Enter your password</b></label>
+         <input type="password" name="password">
+         <div>
+            <button type="submit" class="login">Log in</button>
+            <button type="button" class='cancel' onclick="location.href='./index.htm';">Cancel</button>
+         </div>
+      </div>
+      <p id="p1"> &#127799 Words are a lens to focus one’s mind. &#127799</p>
+   </form>
+</body>
+<script>
+   // // Import the functions you need from the SDKs you need
+   // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+   // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+   // // TODO: Add SDKs for Firebase products that you want to use
+   // // https://firebase.google.com/docs/web/setup#available-libraries
+
+   // // Your web app's Firebase configuration
+   // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+   // const firebaseConfig = {
+   //    apiKey: "AIzaSyDDuTXvU9iPAgFwr7zxanvmJdVrVkSpWyU",
+   //    authDomain: "it-project-43fa1.firebaseapp.com",
+   //    projectId: "it-project-43fa1",
+   //    storageBucket: "it-project-43fa1.appspot.com",
+   //    messagingSenderId: "97111345302",
+   //    appId: "1:97111345302:web:bcdcf5b1dd36d42f669ab7",
+   //    measurementId: "G-FYTLQN8L8D"
+   // };
+
+   // // Initialize Firebase
+   // const app = initializeApp(firebaseConfig);
+   // const analytics = getAnalytics(app);
+
+   var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+   function validate() {
+
+      var email =
+         document.forms.RegForm.email.value;
+      var password =
+         document.forms.RegForm.password.value;
+
+
+      if (email == "" || !regEmail.test(email)) {
+         window.alert("Please enter a valid e-mail address.");
+         email.focus();
+         return false;
+      }
+
+      if (password == "") {
+         alert("Please enter your password");
+         password.focus();
+         return false;
+      }
+
+   }
+
+</script>
+
+</html>

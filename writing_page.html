@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let words do the talking</title>
+    <style>
+        #mySidenav a {
+            position: absolute;
+            left: -100px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 120px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #read {
+            top: 60px;
+            background-color: #04AA6D;
+        }
+
+        #draft {
+            top: 120px;
+            background-color: #2196F3;
+        }
+
+        #setting {
+            top: 180px;
+            background-color: #f44336;
+        }
+
+        #logout {
+            top: 240px;
+            background-color: #555
+        }
+
+        .hd {
+            text-align: center;
+            font-size: 40px;
+            font-family: Garamond;
+        }
+
+        body {
+            background-color: black;
+            color: aliceblue;
+            font-family: Garamond;
+        }
+
+        textarea {
+            background-color: black;
+            color: aliceblue;
+            border-style: none;
+            outline: none;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            resize: none;
+        }
+
+        #txtbox {
+            box-sizing: border-box;
+            margin: 50px;
+            margin-top: 5px;
+            padding: 25px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #content {
+            font-size: 25px;
+            height: 500px;
+            width: 100%;
+        }
+
+        #publish {
+            color: aliceblue;
+            height: 40px;
+            width: 90px;
+            background-color: green;
+            border-radius: 7px;
+            float: right;
+        }
+
+        .icons {
+            height: 20px;
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        #edit-box {
+            box-sizing: border-box;
+            margin: 50px;
+            padding: 10px;
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hd">
+        Let your words talk
+        <button id="publish">Publish</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <div id="edit-box">
+        <img class="icons" id="undo" src="icons/images.png" alt="Undo">
+        <img class="icons" id="redo" src="icons/redo-2-128.png" style="margin-right: 30px;">
+        <img class="icons" id="boldbtn" src="icons/text-bold-128.png">
+        <img class="icons" id="italics" src="icons/letter-i-128.png">
+        <img class="icons" id="underline" src="icons/letter-u-128.png" style="margin-right: 30px;">
+        <img class="icons" id="copy" src="icons/copy-128.png">
+        <img class="icons" id="cut" src="icons/cut-128.png">
+        <img class="icons" id="paste" src="icons/clipboard-5-128.png" style="margin-right: 30px;">
+        <img class="icons" id="save" src="icons/save-128.png">
+        <img class="icons" id="delete" src="icons/delete-128.png">
+    </div> -->
+    <div id="txtbox">
+        <textarea id="title" placeholder="Title.."></textarea><br><br>
+        <textarea id="content" placeholder="Start Writing.."></textarea>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="index.htm" id="read">Home<img class="icons" src="icons/house-128.png"
+                style="margin-left: 50px; margin-right:0px"></a>
+        <a href="#" id="draft">Explore<img class="icons" src="icons/book-2-128.png"
+                style="margin-left: 36px; margin-right:0px"></a>
+        <a href="#" id="setting">Settings<img class="icons" src="icons/settings-6-128.png"
+                style="margin-left: 37px; margin-right:0px"></a>
+        <a href="login.html" id="logout">Logout<img class="icons" src="icons/logout-128.png"
+                style="margin-left: 40px; margin-right:0px"></a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        function publish() {
+            var tt = document.getElementById("title").value;
+            var con = document.getElementById("content").value;
+            const article = {
+                author: "Vaibhav Goel",
+                title: tt,
+                content: con
+            };
+            const jsonString = JSON.stringify(article);
+            console.log(jsonString);
+
+        }
+        $("#publish").click(function () {
+            publish();
+        });
+    </script>
+</body>
+
+</html>
